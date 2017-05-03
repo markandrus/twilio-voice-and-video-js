@@ -1,0 +1,29 @@
+html {
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+body {
+  padding-top: 1em;
+}
+
+li {
+  overflow: hidden;
+}
+
+li video {
+  margin: 1em 0 0.5em 0;
+  width: 100%;
+}
+
+video {
+  object-fit: cover;
+}
+
+.card {
+  margin-bottom: 1em;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,16 @@
+{
+  "name": "twilio-voice-and-video-js",
+  "version": "1.0.0",
+  "description": "Example app demonstrating twilio.js and twilio-video.js",
+  "main": "index.js",
+  "repository": "https://github.com/markandrus/twilio-voice-and-video-js",
+  "author": "Mark Andrus Roberts <mroberts@twilio.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2",
+    "twilio": "^2.11.1"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}

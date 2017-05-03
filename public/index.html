@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Twilio Voice and Video</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="index.css" />
+<script type="text/javascript" src="https://media.twiliocdn.com/sdk/js/client/releases/1.4.14/twilio.js"></script>
+<script type="text/javascript" src="https://media.twiliocdn.com/sdk/js/video/releases/1.0.0/twilio-video.js"></script>
+<script type="text/javascript" src="/waveform.js"></script>
+</head>
+<body class="container">
+
+<div class="card">
+  <form class="card-block">
+    <h4 class="card-title">Tokens</h4>
+    <div class="form-group">
+      <label for="identity">Identity</label>
+      <input type="text" class="form-control" id="identity" placeholder="Alice" />
+      <small class="form-text text-muted">
+        Choose an identity and click "Create" to create a Capability and Access
+        Token pair. twilio.js will use the Capability Token to make and receive
+        voice calls, while twilio-video.js will use the Access Token to connect
+        to Rooms.
+      </small>
+    </div>
+    <button type="submit" class="btn btn-primary" id="create">Create</button>
+  </form>
+</div>
+
+<div class="card" id="voice">
+  <form class="card-block">
+    <h4 class="cart-title">Voice</h4>
+    <div class="form-group">
+      <label for="to">Identity</label>
+      <input type="text" class="form-control" id="to" placeholder="Bob" />
+      <small class="form-text text-muted">
+        Choose an identity and click "Call" to place an outgoing call to the
+        specified Client using twilio.js. Incoming calls will be accepted
+        automatically.
+      </small>
+    </div>
+    <button type="submit" class="btn btn-primary" id="call" disabled>Call</button>
+    <button type="submit" class="btn btn-danger" id="hangup" disabled>Hangup</button>
+  </form>
+</div>
+
+<div class="card" id="video">
+  <form class="card-block">
+    <h4 class="cart-title">Video</h4>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" placeholder="My Cool Room" />
+      <small class="form-text text-muted">
+        Choose a Room name and click "Connect" to connect to the specified Room
+        using twilio-video.js.
+      </small>
+    </div>
+    <button type="submit" class="btn btn-primary" id="connect" disabled>Connect</button>
+    <button type="submit" class="btn btn-danger" id="disconnect" disabled>Disconnect</button>
+  </form>
+</div>
+
+<script type="text/javascript" src="index.js"></script>
+</body>
